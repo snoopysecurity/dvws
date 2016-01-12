@@ -1,5 +1,5 @@
 # Damn Vulnerable Web Services 
-Damn Vulnerable Web Services 
+
 
 Damn Vulnerable Web Services is a vulnerable testing environment that can be used to learn real world web service vulnerabilities. The aim of this project is to aid security professionals in testing their skills and tools in a legal environment.
 
