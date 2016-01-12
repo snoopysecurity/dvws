@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<users>
+	<user>
+		<id>1</id>
+		<login>admin</login>
+		<password>$tr0ngpassw0rd</password>
+		<accountd>06578368643</accountd>
+		<country>United States</country>
+		<birthday>19th March 1980</birthday>
+	</user>
+	<user>
+		<id>2</id>
+		<login>sam</login>
+		<password>qwerty123</password>
+		<accountd>01768765643</accountd>
+		<country>United Kingdom</country>
+		<birthday>25th September 1989</birthday>
+	</user>
+	<user>
+		<id>3</id>
+		<login>matthew</login>
+		<password>Avengers</password>
+		<accountd>09898765463</accountd>
+		<country>Italy</country>
+		<birthday>1st April 1976</birthday>
+	</user>
+	<user>
+		<id>4</id>
+		<login>nik</login>
+		<password>Windows7!</password>
+		<accountd>08978656453</accountd>
+		<country>China</country>
+		<birthday>15th May 1980</birthday>
+	</user>
+	<user>
+		<id>5</id>
+		<login>johnny</login>
+		<password>andr0idtest</password>
+		<accountd>01787564563</accountd>
+		<country>Australia</country>
+		<birthday>12th January 1991</birthday>
+	</user>
+	<user>
+		<id>6</id>
+		<login>mike</login>
+		<password>newus564</password>
+		<accountd>18987657654</accountd>
+		<country>Underworld</country>
+		<birthday>9th Jne 1993</birthday>
+	</user>
+</users>
