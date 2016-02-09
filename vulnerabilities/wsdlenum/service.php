@@ -11,7 +11,7 @@
 				);
 
 	$server->register(
-				"user_id",   //name of function
+				"check_user_id",   //name of function
 				array("username"=>'xsd:string'),	  //input
 				array("return"=>'xsd:string')   //output
 				);			
