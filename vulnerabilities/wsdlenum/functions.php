@@ -39,7 +39,7 @@ function Return_price($name)
 	{
 		$details=array(                          
 			'China'=>1458,                                //value arrays
-			'India'=>1398,
+			'India'=>1398,                                //new arrays
 			'United States'=>352,
 			'Indonesia'=>273,
 			'Brazil'=>223,

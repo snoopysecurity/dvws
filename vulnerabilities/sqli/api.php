@@ -20,7 +20,7 @@ $key = array_shift($request);
 
  
 
- 
+// sqli vulnerability 
 // create SQL based on HTTP method
 switch ($method) {
   case 'GET':
