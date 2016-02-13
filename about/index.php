@@ -78,7 +78,7 @@
 	<li>Robin Wood (@digininja)</li>
 	<li>Kevin Johnson (@secureideas)</li>
 
-<p>If are looking for a walkthrough and explaination of all the vulnerablies found in dvws, it can be found <a href="/dvws/Attacking Damn Vulnerable Web Services.pdf">here</a></p>
+<p>If you are looking for a walkthrough and explaination of all the vulnerablies found in dvws, it can be found <a href="/dvws/Attacking Damn Vulnerable Web Services.pdf">here</a></p>
                       
 <p><br>Lastly, if you want to learn more about web services and play with more vulnerable applications, checkout the following</p>
 <ul>
