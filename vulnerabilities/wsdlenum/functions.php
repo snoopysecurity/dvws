@@ -20,8 +20,8 @@ function Return_price($name)
 	function check_user_id($username)
 	{
 		$details=array(
-			'Admin'=>'001, Well done!',              //value arrays
-			'Root'=>'002, Well done!',
+			'admin'=>'001, Well done!',              //value arrays
+			'root'=>'002, Well done!',
 			'Mike'=>'003, Well done!',
 			'Will'=>'004, Well done!',
 			'John'=>'005, Well done!',

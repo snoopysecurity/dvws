@@ -3,10 +3,11 @@
 
 Damn Vulnerable Web Services is a vulnerable testing environment that can be used to learn real world web service vulnerabilities. The aim of this project is to aid security professionals in testing their skills and tools in a legal environment.
 
+Note: This project is still in development stage.
 
 ![DVWS](http://snoopythesecuritydog.github.io/img/dvws.png) 
 
-This application is designed to understand the following security issues.
+This application is designed to exploit the following vulnerabilities.
 
 + WSDL Enumeration
 + XML External Entity Injection
@@ -17,6 +18,8 @@ This application is designed to understand the following security issues.
 + OS Command Injection
 + Server Side Request Forgery
 + REST API SQL Injection
+
+
 
 
 # Instructions
