@@ -30,7 +30,7 @@
 
     <div id="wrapper">
 
-        <!-- Sidebar -->
+       <!-- Sidebar -->
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
                 <li class="sidebar-brand">
@@ -54,7 +54,8 @@
                 <li><a href="/dvws/vulnerabilities/xst/xst.php">Cross Site Tracing (XST)</a></li>
                 <li><a href="/dvws/vulnerabilities/ssrf/">Server Side Request Forgery</a></li>
                 <li><a href="/dvws/vulnerabilities/sqli/">REST API SQL Injection</a></li>
-                </li>
+				   <li><a href="/dvws/vulnerabilities/xxe2/">XML External Entity Injection 2</a></li>
+                
             </ul>
             
         </div>

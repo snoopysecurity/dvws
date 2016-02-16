@@ -24,6 +24,7 @@ This application is designed to exploit the following vulnerabilities.
 # Instructions
 DVWS can be used with a XAMPP setup. XAMPP is a free and open source cross-platform web server solution which mainly consists of an Apache Web Server and MySQL database. To setup, download and install the XAMPP setup first. Next, download the dvws folder and copy the folder to your htdocs directory. Lastly, Setup or reset the database by going to http://localhost/dvws/about/instructions.php
 
+Note: Some vulnerabilities such as Command Injection might not work on Windows due to incompatibility.
 
 # Disclaimer 
 Do not host this application on live or production environment. 
@@ -31,4 +32,10 @@ Do not host this application on live or production environment.
 # Copyright
 This work is licensed under GNU GENERAL PUBLIC LICENSE Version 3
 To view a copy of this license, visit http://www.gnu.org/licenses/gpl-3.0.txt
+
+# To do list
+
++ JSON Hijacking
++ SOAP Injection
++ XML Injection
 

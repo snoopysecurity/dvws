@@ -30,7 +30,7 @@
 
     <div id="wrapper">
 
-        <!-- Sidebar -->
+       <!-- Sidebar -->
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
                 <li class="sidebar-brand">
@@ -54,7 +54,8 @@
                 <li><a href="/dvws/vulnerabilities/xst/xst.php">Cross Site Tracing (XST)</a></li>
                 <li><a href="/dvws/vulnerabilities/ssrf/">Server Side Request Forgery</a></li>
                 <li><a href="/dvws/vulnerabilities/sqli/">REST API SQL Injection</a></li>
-                </li>
+				   <li><a href="/dvws/vulnerabilities/xxe2/">XML External Entity Injection 2</a></li>
+                
             </ul>
             
         </div>
@@ -78,8 +79,7 @@
 	<li>Robin Wood (@digininja)</li>
 	<li>Kevin Johnson (@secureideas)</li>
 
-<p>If you are looking for a walkthrough and explaination of all the vulnerablies found in dvws, it can be found <a href="/dvws/Attacking Damn Vulnerable Web Services.pdf">here</a></p>
-                      
+                   
 <p><br>Lastly, if you want to learn more about web services and play with more vulnerable applications, checkout the following</p>
 <ul>
    <li><a href="https://www.youtube.com/watch?v=oPrrFNEasgE">Greg Patton -The API Assessment Primer (AppSecEU) 2015</a></li>
@@ -88,4 +88,8 @@
    <li><a href="https://sourceforge.net/projects/mutillidae/">OWASP Mutillidae II (vulnerable application)</a></li>
   <li><a href="https://github.com/s4n7h0/xvwa">XVWA (vulnerable application)</a></li>
     <li><a href="https://github.com/WebGoat/WebGoat">OWASP Webgoat 7 (vulnerable application)</a></li>
-<ul>
+</ul>
+
+
+<p>PS:If you are looking for a walkthrough and explaination of all the vulnerablies found in dvws, it can be found <a href="/dvws/Attacking Damn Vulnerable Web Services.pdf">here</a></p>
+  

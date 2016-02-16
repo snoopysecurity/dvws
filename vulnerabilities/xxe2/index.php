@@ -10,7 +10,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Cross Site Tracing (XST)</title>
+    <title>XML External Entity 2</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="../../css/bootstrap.min.css" type="text/css" rel="stylesheet">
@@ -59,45 +59,44 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12">
-
-    <h1>Cross Site Tracing (XST)</h1>
-
-    <p> <br>The TRACE verb supported by most web servers can be manipulated to produce a Cross-Site Scripting attack that results in sending malicious JavaScript to the victim's browser. The TRACE verb is designed to echo a user's input and intended for debugging or testing a web server. Cross Site Tracing (XST) enables an attacker to steal the victim's session cookies even if the HTTP Only option is set. </p>
-
-                        <h2>More Information</h2>
+                        <h1>XML External Entity 2</h1>
+                        <p>Many web and mobile applications rely on web services communication for client-server interaction.An XML External Entity attack is a type of attack against an application that parses XML input.</p>
+                        <p>An XXE attack occurs when XML input containing a reference to an external entity is processed by a weakly configured XML parser. This attack may lead to the disclosure of confidential data, denial of service, port scanning from the perspective of the machine where the parser is located, and other system impacts.</p>
+                              <h2>More Information</h2>
 	<ul>
-		<li><a href="http://hiderefer.com/?https://www.owasp.org/index.php/Cross_Site_Tracing" target="_blank">https://www.owasp.org/index.php/Cross_Site_Tracing</a></li>
-		<li><a href="http://hiderefer.com/?https://capec.mitre.org/data/definitions/107.html" target="_blank">https://capec.mitre.org/data/definitions/107.html<br></a></li>
+		<li><a href="http://hiderefer.com/?https://www.owasp.org/index.php/XML_External_Entity_(XXE)_Processing" target="_blank">https://www.owasp.org/index.php/XML_External_Entity_(XXE)_Processing</a></li>
+		<li><a href="http://hiderefer.com/?http://projects.webappsec.org/w/page/13247003/XML External Entities" target="_blank">http://projects.webappsec.org/w/page/13247003/XML External Entities</a></li>
 		</ul>
+                        <p><br>This XXE example processes and parses the entire request sent by the print greeting button.</p>
+                                      
+         <p><br><input type="button" onclick="loadDoc();" value="Print Greeting"></p>
 
-    <h4><br>The NuSOAP Library service is vulnerable to a Cross-site scripting flaw: <br><br><br></h4>
-  </div>
-
-  <div id="game-frame-container">
-    <div id="topbar"></div>
-    <div class="example-controls">
-      <span class="url">URL</span>
- <form action="<?php $_PHP_SELF ?>" method="POST">
-        <input type="text" name="name" value="/dvws/vulnerabilities/wsdlenum/service.php/" />
-     <input type="Submit" value="Go"/>
-    </div>
-   
-
-
-  </body>
-</html>
-
-
-<?php
-
-$value = '890750684af1101a65f443f039c02951';             //sets a random cookie
-setcookie("StealthiscookiewithXST", $value);
-
-  if (isset( $_POST["name"]))
-   {
-	   $homepage = $_POST["name"];
-	echo '<br><iframe class="game-frame" src="'.$homepage.'"height="450" width="950"></iframe>';   //loads the vulnerable page in an iframe
-	
+<p id="demo"></p>
+  
+ <script>
+function loadDoc() {
+//create the xml payload for xml-rpc	
+            var req_params;
+            var greeting = "DVWS";
+            req_params = "<uservalue>\n";
+            req_params = req_params + "<value>"+ greeting + "</value>\n";
+            req_params = req_params + "</uservalue>\n";
+            
+            	
+  var xhttp;
+  xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+  if (xhttp.readyState == 4 && xhttp.status == 200) {
+    xmlDoc = xhttp.responseText;
+    txt = "";
+    document.getElementById("demo").innerHTML = xhttp.responseText;
+    }
+  };
+  xhttp.open("POST", "server.php", true);
+  //send the request
+  xhttp.send(req_params);
 }
-?>
-
+</script> 
+   </body>
+   
+</html>
