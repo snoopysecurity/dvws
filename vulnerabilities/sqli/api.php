@@ -8,7 +8,9 @@ $request = explode('/', trim($_SERVER['PATH_INFO'],'/'));
 $input = json_decode(file_get_contents('php://input'),true);
  
 // connect to the mysql database
-$link = mysql_connect('localhost', 'root', '', 'dvws');
+// if you use the lamp, you must enter a password mysql server
+// example password is @!=56u, you should change your password you use :)
+$link = mysql_connect('localhost', 'root', '@!=56u', 'dvws'); 
 mysql_set_charset('utf8');
  
 // retrieve the table and key from the path
