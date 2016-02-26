@@ -61,7 +61,7 @@
                     <div class="col-lg-12">
                         <h1>REST API SQL Injection</h1>
                         <p>SQL injection is a security vulnerability in which an attacker is able to submit a database SQL command that is executed by a web application, exposing the back-end database. A SQL injection attack can occur when a web application utilizes user-supplied data without proper validation or encoding as part of a command or query.</p>
-                      
+                      <p><b>Note:</b> If the REST API is exhibiting "Unable to connect to the database. mysql_error()", please edit the api.php file located under \dvws\vulnerabilities\sqli</p>
                               <h2>More Information</h2>
 	<ul>
 		<li><a href="http://hiderefer.com/?https://www.owasp.org/index.php/SQL_Injection" target="_blank">https://www.owasp.org/index.php/SQL_Injection</a></li>

@@ -71,7 +71,7 @@
 
 
 
-                        <p>Click on the 'Create / Reset Database' button below to create or reset your database. If the database already exists, it will be cleared and all data will be reset. Incase of any MySQL Access denied error, make necessary changes in dvws/instructions.php for database connection.</p>
+                        <p>Click on the 'Create / Reset Database' button below to create or reset your database. If the database already exists, it will be cleared and all data will be reset. Incase of any MySQL Access denied error, make necessary changes in the <b>dvws/instructions.php</b> for database connection.</p>
                  
                         
                    
@@ -85,7 +85,7 @@
 </html>
 <?php
    if (isset( $_POST["create_db"])) {
-//connect to database   
+//connect to database. Make necessary changes to $connect for successful connection   
 		$connect =  new mysqli('localhost', 'root', '');
 		if ($connect->connect_error) {
 		die("Connection failed<br> " . $conn->connect_error);
