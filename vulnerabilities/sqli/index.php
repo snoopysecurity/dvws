@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-	
-	
+
+
 	<head>
 
     <meta charset="utf-8">
@@ -12,49 +12,20 @@
 
     <title>REST API SQL Injection</title>
 
-    <!-- Bootstrap Core CSS -->
-    <link href="../../css/bootstrap.min.css" type="text/css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link href="../../css/simple-sidebar.css" type="text/css" rel="stylesheet">
+    <?php require(dirname(__FILE__)."../../../bootstrap.php") ?>
 
 </head>
    <body>
-	   
-	   
-    <div id="wrapper">
 
-       <!-- Sidebar -->
-        <div id="sidebar-wrapper">
-            <ul class="sidebar-nav">
-                <li class="sidebar-brand">
-                    <a href="/dvws/index.html">
-                        Home
-                    </a>
-                </li>
-                <li><a href="/dvws/about/">About</a></li>
-                <li><a href="/dvws/about/instructions.php">Setup instructions</a></li>
-                <li><a href="/dvws/appinfo.php">PHP Information</a></li>
-        
-                                <li class="sidebar-brand">
-                    <a href="/dvws/vulnerabilities/">
-                        Vulnerabilities
-                    </a>
-                <li><a href="/dvws/vulnerabilities/wsdlenum/">WSDL Enumeration</a></li>
-                <li><a href="/dvws/vulnerabilities/xmlbomb/xmlbomb.php">XML Bomb Denial-of-Service</a></li>
-                <li><a href="/dvws/vulnerabilities/xxe/">XML External Entity Injection</a></li>
-                <li><a href="/dvws/vulnerabilities/xpath/xpath.php">XPATH Injection</a></li>
-                <li><a href="/dvws/vulnerabilities/cmdi/client.php">Command Injection</a></li>
-                <li><a href="/dvws/vulnerabilities/xst/xst.php">Cross Site Tracing (XST)</a></li>
-                <li><a href="/dvws/vulnerabilities/ssrf/">Server Side Request Forgery</a></li>
-                <li><a href="/dvws/vulnerabilities/sqli/">REST API SQL Injection</a></li>
-				   <li><a href="/dvws/vulnerabilities/xxe2/">XML External Entity Injection 2</a></li>
-                
-            </ul>
-            
-        </div>
+
+		 <!-- Sidebar -->
+	 <div id="wrapper">
+
+		 <div class="col-md-3">
+   <?php require(dirname(__FILE__)."../../../sidebar.php") ?>
+</div>
         <!-- /#sidebar-wrapper -->
-        
+
       <div id="page-content-wrapper">
             <div class="container-fluid">
                 <div class="row">
@@ -67,12 +38,27 @@
 		<li><a href="http://hiderefer.com/?https://www.owasp.org/index.php/SQL_Injection" target="_blank">https://www.owasp.org/index.php/SQL_Injection</a></li>
 		<li><a href="http://hiderefer.com/?http://php.net/manual/en/security.database.sql-injection.php" target="_blank">http://php.net/manual/en/security.database.sql-injection.php</a></li>
 		</ul>
-                     
-                <p> <br>The following REST service is vulnerable to SQL Injection.</p>                         
-                        
-REST Service which retrives a user based on ID: <a href="/dvws/vulnerabilities/sqli/api.php/users/2">/dvws/vulnerabilities/sqli/api.php/users/2</a>
+
+                <p> <br>The following REST service is vulnerable to SQL Injection.This REST Service retrives a user based on ID</p>
+
+<p id="demo"></p>
+								<script>
+								var request = new XMLHttpRequest();
+								request.onreadystatechange = function() {
+							  if (request.readyState == 4 && request.status == 200) {
+								          document.getElementById("demo").innerHTML = this.responseText;
+								    }
+								};
+								request.open('GET', 'api.php/users/2', true);
+								request.setRequestHeader('X-Requested-With', 'XMLHttpRequest');  // Tells server that this call is made for ajax purposes.
+								request.send(null);  // No data needs to be sent along with the request.
+								</script>
+
+
+<br><br>
+								REST API URL: <a href="/<?php echo "$dir/vulnerabilities/sqli/api.php/users/2\">/dvws/vulnerabilities/sqli/api.php/users/2</a>"; ?>
 
 
    </body>
-   
+
 </html>

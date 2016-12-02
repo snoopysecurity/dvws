@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-	
-	
+
+
 	<head>
 
     <meta charset="utf-8">
@@ -10,58 +10,27 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>XML External Entity</title>
+		<title>XML Bomb Denial-of-Service</title>
 
-    <!-- Bootstrap Core CSS -->
-    <link href="../../css/bootstrap.min.css" type="text/css" rel="stylesheet">
+		<?php require(dirname(__FILE__)."../../../bootstrap.php") ?>
 
-    <!-- Custom CSS -->
-    <link href="../../css/simple-sidebar.css" type="text/css" rel="stylesheet">
+	</head>
+	 <body>
 
-</head>
-   <body>
-	   
-	   
-    <div id="wrapper">
 
-       <!-- Sidebar -->
-        <div id="sidebar-wrapper">
-            <ul class="sidebar-nav">
-                <li class="sidebar-brand">
-                    <a href="/dvws/index.html">
-                        Home
-                    </a>
-                </li>
-                <li><a href="/dvws/about/">About</a></li>
-                <li><a href="/dvws/about/instructions.php">Setup instructions</a></li>
-                <li><a href="/dvws/appinfo.php">PHP Information</a></li>
-        
-                                <li class="sidebar-brand">
-                    <a href="/dvws/vulnerabilities/">
-                        Vulnerabilities
-                    </a>
-                <li><a href="/dvws/vulnerabilities/wsdlenum/">WSDL Enumeration</a></li>
-                <li><a href="/dvws/vulnerabilities/xmlbomb/xmlbomb.php">XML Bomb Denial-of-Service</a></li>
-                <li><a href="/dvws/vulnerabilities/xxe/">XML External Entity Injection</a></li>
-                <li><a href="/dvws/vulnerabilities/xpath/xpath.php">XPATH Injection</a></li>
-                <li><a href="/dvws/vulnerabilities/cmdi/client.php">Command Injection</a></li>
-                <li><a href="/dvws/vulnerabilities/xst/xst.php">Cross Site Tracing (XST)</a></li>
-                <li><a href="/dvws/vulnerabilities/ssrf/">Server Side Request Forgery</a></li>
-                <li><a href="/dvws/vulnerabilities/sqli/">REST API SQL Injection</a></li>
-				   <li><a href="/dvws/vulnerabilities/xxe2/">XML External Entity Injection 2</a></li>
-                
-            </ul>
-            
-        </div>
-        <!-- /#sidebar-wrapper -->
-        
-      <div id="page-content-wrapper">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-12">
+		 <!-- Sidebar -->
+	 <div id="wrapper">
 
-    <h1>XML Bomb Denial-of-Service</h1>
-    
+		 <div class="col-md-3">
+		 <?php require(dirname(__FILE__)."../../../sidebar.php") ?>
+	</div>
+
+			<div id="page-content-wrapper">
+						<div class="container-fluid">
+								<div class="row">
+										<div class="col-lg-12">
+
+
     </html>
 <?php
 
@@ -75,12 +44,12 @@
 	print_r($vals);
 	 get_server_memory_usage();
 	 get_server_cpu_usage();
-	
+
 
 function get_server_memory_usage(){
     //shows server memory usage
-    if (stristr(PHP_OS, 'Linux')) 
-    {    
+    if (stristr(PHP_OS, 'Linux'))
+    {
 		$free = shell_exec('free');
 		$free = (string)trim($free);
 		$free_arr = explode("\n", $free);
@@ -101,12 +70,12 @@ function get_server_memory_usage(){
 		return false;
 	}
 	}
-}    
+}
 function get_server_cpu_usage(){
     //shows server CPU Usage
 {
     $load=array();
-    if (stristr(PHP_OS, 'win')) 
+    if (stristr(PHP_OS, 'win'))
     {
     $output = array();
     exec( 'tasklist ', $output );
@@ -119,15 +88,15 @@ function get_server_cpu_usage(){
             $memory_size=$ex[$count_ex-2]." Kb";
             print "<br><br>The server CPU usage is ".$memory_size;
         }
-    } 
-    } 
+    }
+    }
     else
     {
         $load = sys_getloadavg();
         print "<br><br>The server CPU usage is ".$load[0];
     }
     return $load;
-}    
+}
 
-} 
+}
 ?>

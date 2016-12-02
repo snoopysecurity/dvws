@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-	
-	
+
+
 	<head>
 
     <meta charset="utf-8">
@@ -12,49 +12,18 @@
 
     <title>Cross Site Tracing (XST)</title>
 
-    <!-- Bootstrap Core CSS -->
-    <link href="../../css/bootstrap.min.css" type="text/css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link href="../../css/simple-sidebar.css" type="text/css" rel="stylesheet">
+    <?php require(dirname(__FILE__)."../../../bootstrap.php") ?>
 
 </head>
    <body>
-	   
-	   
-    <div id="wrapper">
 
-        <!-- Sidebar -->
-        <div id="sidebar-wrapper">
-            <ul class="sidebar-nav">
-                <li class="sidebar-brand">
-                    <a href="/dvws/index.html">
-                        Home
-                    </a>
-                </li>
-                <li><a href="/dvws/about/">About</a></li>
-                <li><a href="/dvws/about/instructions.php">Setup instructions</a></li>
-                <li><a href="/dvws/appinfo.php">PHP Information</a></li>
-        
-                                <li class="sidebar-brand">
-                    <a href="/dvws/vulnerabilities/">
-                        Vulnerabilities
-                    </a>
-                <li><a href="/dvws/vulnerabilities/wsdlenum/">WSDL Enumeration</a></li>
-                <li><a href="/dvws/vulnerabilities/xmlbomb/xmlbomb.php">XML Bomb Denial-of-Service</a></li>
-                <li><a href="/dvws/vulnerabilities/xxe/">XML External Entity Injection</a></li>
-                <li><a href="/dvws/vulnerabilities/xpath/xpath.php">XPATH Injection</a></li>
-                <li><a href="/dvws/vulnerabilities/cmdi/client.php">Command Injection</a></li>
-                <li><a href="/dvws/vulnerabilities/xst/xst.php">Cross Site Tracing (XST)</a></li>
-                <li><a href="/dvws/vulnerabilities/ssrf/">Server Side Request Forgery</a></li>
-                <li><a href="/dvws/vulnerabilities/sqli/">REST API SQL Injection</a></li>
-				   <li><a href="/dvws/vulnerabilities/xxe2/">XML External Entity Injection 2</a></li>
-                
-            </ul>
-            
-        </div>
-        <!-- /#sidebar-wrapper -->
-        
+		 <!-- Sidebar -->
+	 <div id="wrapper">
+
+		 <div class="col-md-3">
+   <?php require(dirname(__FILE__)."../../../sidebar.php") ?>
+</div>
+
       <div id="page-content-wrapper">
             <div class="container-fluid">
                 <div class="row">
@@ -78,10 +47,10 @@
     <div class="example-controls">
       <span class="url">URL</span>
  <form action="<?php $_PHP_SELF ?>" method="POST">
-        <input type="text" name="name" value="/dvws/vulnerabilities/wsdlenum/service.php/" />
+      <?php echo "<input type=\"text\" name=\"name\" value=\"/$dir/vulnerabilities/wsdlenum/service.php/\" />"; ?>
      <input type="Submit" value="Go"/>
     </div>
-   
+
 
 
   </body>
@@ -89,7 +58,7 @@
 
 
 <?php
-
+error_reporting(0);
 $value = '890750684af1101a65f443f039c02951';             //sets a random cookie
 setcookie("StealthiscookiewithXST", $value);
 
@@ -97,7 +66,6 @@ setcookie("StealthiscookiewithXST", $value);
    {
 	   $homepage = $_POST["name"];
 	echo '<br><iframe class="game-frame" src="'.$homepage.'"height="450" width="950"></iframe>';   //loads the vulnerable page in an iframe
-	
+
 }
 ?>
-

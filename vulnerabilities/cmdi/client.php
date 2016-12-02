@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-	
-	
+
+
 	<head>
 
     <meta charset="utf-8">
@@ -12,49 +12,20 @@
 
     <title>Command Injection</title>
 
-    <!-- Bootstrap Core CSS -->
-    <link href="../../css/bootstrap.min.css" type="text/css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link href="../../css/simple-sidebar.css" type="text/css" rel="stylesheet">
+    <?php require("".dirname(__FILE__)."../../../bootstrap.php") ?>
 
 </head>
    <body>
-	   
-	   
-    <div id="wrapper">
 
-       <!-- Sidebar -->
-        <div id="sidebar-wrapper">
-            <ul class="sidebar-nav">
-                <li class="sidebar-brand">
-                    <a href="/dvws/index.html">
-                        Home
-                    </a>
-                </li>
-                <li><a href="/dvws/about/">About</a></li>
-                <li><a href="/dvws/about/instructions.php">Setup instructions</a></li>
-                <li><a href="/dvws/appinfo.php">PHP Information</a></li>
-        
-                                <li class="sidebar-brand">
-                    <a href="/dvws/vulnerabilities/">
-                        Vulnerabilities
-                    </a>
-                <li><a href="/dvws/vulnerabilities/wsdlenum/">WSDL Enumeration</a></li>
-                <li><a href="/dvws/vulnerabilities/xmlbomb/xmlbomb.php">XML Bomb Denial-of-Service</a></li>
-                <li><a href="/dvws/vulnerabilities/xxe/">XML External Entity Injection</a></li>
-                <li><a href="/dvws/vulnerabilities/xpath/xpath.php">XPATH Injection</a></li>
-                <li><a href="/dvws/vulnerabilities/cmdi/client.php">Command Injection</a></li>
-                <li><a href="/dvws/vulnerabilities/xst/xst.php">Cross Site Tracing (XST)</a></li>
-                <li><a href="/dvws/vulnerabilities/ssrf/">Server Side Request Forgery</a></li>
-                <li><a href="/dvws/vulnerabilities/sqli/">REST API SQL Injection</a></li>
-				   <li><a href="/dvws/vulnerabilities/xxe2/">XML External Entity Injection 2</a></li>
-                
-            </ul>
-            
-        </div>
+		 <!-- Sidebar -->
+	 <div id="wrapper">
+
+		 <div class="col-md-3">
+     <?php require("".dirname(__FILE__)."../../../sidebar.php") ?>
+</div>
+
         <!-- /#sidebar-wrapper -->
-        
+
       <div id="page-content-wrapper">
             <div class="container-fluid">
                 <div class="row">
@@ -69,7 +40,7 @@
 		</ul>
                         <p><br>This webpage provides information on how long the system has been running,  how  many  users  are
        currently  logged  on,  and the system load averages for the past 1, 5,and 15 minutes.<br></p>
-     
+
       <form action="<?php $_PHP_SELF ?>" method="POST">
 <b>Select the format you want to view the system uptime on</b><br>
   <input type="radio" name="name" value=" ">Normal format<br>
@@ -77,14 +48,14 @@
   <input type="radio" name="name" value="-p">Short Format<br>
     <input type="radio" name="name" value="find">Windows Format (Only on Windows Systems)<br>
 <br><input type="Submit" /><br>
-      </form>                                      
-                   
+      </form>
+
    </body>
    </html>
 
 <?php
 require_once 'jsonRPCClient.php';
-$myExample = new jsonRPCClient('http://127.0.0.1/dvws/vulnerabilities/cmdi/server.php');
+$myExample = new jsonRPCClient('http://127.0.0.1/'.$dir.'/vulnerabilities/cmdi/server.php');
 
 // performs some basic operation
 
