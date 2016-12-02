@@ -48,4 +48,28 @@
 		<country>Underworld</country>
 		<birthday>9th Jne 1993</birthday>
 	</user>
+	<user>
+		<id>7</id>
+		<login>John</login>
+		<password>pa5560rd</password>
+		<accountd>19094443</accountd>
+		<country>0x00</country>
+		<birthday>11th May 1980</birthday>
+	</user>
+	<user>
+		<id>8</id>
+		<login>Dave</login>
+		<password>password</password>
+		<accountd>18987657654</accountd>
+		<country>Newbury</country>
+		<birthday>17th June 1960</birthday>
+	</user>
+	<user>
+		<id>9</id>
+		<login>Joe</login>
+		<password>Sixpass12</password>
+		<accountd>100000111</accountd>
+		<country>WRM Sec</country>
+		<birthday>3rd Jan 1995</birthday>
+	</user>
 </users>

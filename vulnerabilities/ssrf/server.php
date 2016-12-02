@@ -160,9 +160,22 @@ in an alphabetic order.';
 		// just sends back a string
 		$s=$m->getParam(0);
 		$v = $s->scalarval();
-		$section = file_get_contents(''.$v.'', NULL, NULL, 0, 12);
+
+//ssrf
+		$curlobj = curl_init($v);
+		$fp = fopen($v,"w");
+		curl_setopt($curlobj, CURLOPT_FILE, $fp);
+		curl_setopt($curlobj, CURLOPT_HEADER, 0);
+		curl_setopt($curlobj, CURLOPT_FOLLOWLOCATION, true);
+		curl_exec($curlobj);
+		curl_close($curlobj);
+		fclose($fp);
+		$fp = fopen($v,"r");
+		$result = fread($fp, filesize($v));
+		fclose($fp);
+
 //		$section = var_dump($section);
-		return new xmlrpcresp(new xmlrpcval($section));
+		return new xmlrpcresp(new xmlrpcval($result));
 	}
 
 	$echoback_sig=array(array($xmlrpcString, $xmlrpcString));
