@@ -1,5 +1,8 @@
 # Damn Vulnerable Web Services
 
+**NOTE: This project is out of date, please use https://github.com/snoopysecurity/dvws-node**
+
+
 
 Damn Vulnerable Web Services is an insecure web application with multiple vulnerable web service components that can be used to learn real world web service vulnerabilities. The aim of this project is to help security professionals learn about Web Application Security through the use of a practical lab environment.
 
