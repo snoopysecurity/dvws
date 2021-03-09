@@ -10,9 +10,10 @@ $input = json_decode(file_get_contents('php://input'),true);
 // connect to the mysql database
 // if you use the lamp, you must enter a password mysql server
 // example password is left blank due to most pre configured stacks having blank passwords, you should change your password :)
-$link = mysql_connect('localhost', 'root', '', 'dvws'); 
-mysql_set_charset('utf8');
- 
+$link = mysqli_connect('localhost', 'root', '', 'dvws'); 
+mysqli_query($link, "SET NAMES 'utf8'");
+//mysqli_set_charset('utf8');
+
 // retrieve the table and key from the path
 $table = array_shift($request);
 $key = array_shift($request);
